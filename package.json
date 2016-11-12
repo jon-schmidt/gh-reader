@@ -1,0 +1,17 @@
+{
+  "name": "gh-reader",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "Jon Schmidt <jon@aweful.website>",
+  "license": "MIT",
+  "bin": {
+    "gh-reader": "./gh-reader"
+  },
+  "dependencies": {
+    "args": "^2.1.0",
+    "axios": "^0.15.2",
+    "colors": "^1.1.2",
+    "hget": "^3.0.1",
+    "prompt": "^1.0.0"
+  }
+}

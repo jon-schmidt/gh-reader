@@ -1,0 +1,6 @@
+#! /usr/bin/env node
+require('child_process').spawn(process.execPath, [ '--harmony', 'main.js', ...process.argv ], {
+  stdio: [ 0, 1, 2 ],
+  encoding: 'utf8',
+  cwd: __dirname
+})

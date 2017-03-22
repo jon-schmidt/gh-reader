@@ -2,15 +2,12 @@
 
 const args = require('args')
 const colors = require('colors/safe')
-const get = require('axios').get
 const hget = require('hget')
 const prompt = require('prompt')
+const { get } = require('axios')
 
-// setup prompt
 prompt.message = ''
 prompt.delimiter = colors.magenta('?')
-
-// add Promise-based ask method to prompt
 prompt.ask = function (request) {
   return new Promise((resolve, reject) => {
     prompt.get(request, (err, result) => {
@@ -25,7 +22,6 @@ args
 .option('user', 'github username')
 .option('repo', 'repo to search for')
 .option('markdown', 'show result as markdown')
-.option('less', 'pipe result to less')
 
 const options = args.parse(process.argv)
 
